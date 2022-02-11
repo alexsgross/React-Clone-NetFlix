@@ -1,0 +1,20 @@
+.featured{
+    height: 100vh;
+    /*define o tamanho da tela em que o  usuário esta acessando (fica do tamanho inicial da tela*/
+}
+.featured--vertical{
+    width: inherit;
+    height: inherit;
+    /*defin largura e altura da tela*/
+    background: linear-gradient(to top, #111 5%, transparent 95%);
+    /*define um degrade de fundo para finalizar a imagem igualando ao fundo*/
+    
+}
+.featured--horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 10% , transparent 90%);
+    /*define um degrade de fundo para finalizar a imagem igualando ao fundo da esquerda para direita*/
+
+
+}

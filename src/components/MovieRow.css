@@ -1,0 +1,38 @@
+.movieRow{
+    margin-bottom: 30px;
+    /*Entre uma categoria e outra*/
+}
+.movieRow h2{
+    margin: 0px 0px 0px 30px;
+    /*zerar as margens e deixar apenas esqueda*/
+}
+.movieRow--listarea{
+    overflow-x: hidden;
+    /*Tudo o que passar da tela será cortado*/
+    padding-left: 30px;
+    /*para dar espaços nos cantos*/
+}
+.movieRow--list{
+    width: 999999px;
+    /*Tamanho máximo da lista*/
+}
+.movieRow--item{
+    display: inline-block; 
+    /*para ficar um ap lado do outro*/
+    width: 150px;
+    /*define a largura de cada um*/
+    cursor: pointer;
+    /*para quando passar o mouse pela imagem, fique em formato de mão */
+}
+.movieRow--item img{
+    width: 100%;
+    /*Tamanho da imagem*/
+    transform: scale(0.9);
+    /*Reduzir a imagem para haver um espaço entre cada filme*/
+    transition: all 0.3s ease-in-out;
+    /*cria e suaviza o efeito de transição*/
+}
+.movieRow--item img:hover{
+    transform: scale(1);
+    /*Ao passar o mouse sobre a imagem, ela fica maior. cria um efeito de lupa*/
+}
