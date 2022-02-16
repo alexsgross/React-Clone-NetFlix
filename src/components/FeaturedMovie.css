@@ -13,8 +13,107 @@
 .featured--horizontal{
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right, #111 10% , transparent 90%);
+    background: linear-gradient(to right, #111 10% , transparent 90%);    
     /*define um degrade de fundo para finalizar a imagem igualando ao fundo da esquerda para direita*/
+    display: flex; /*define que o elemento pode ser dividido em linhas e colunas*/
+    flex-direction: column; /*define que o elemento será dividido em linhas e colunas*/
+    justify-content: center; /*define que o elemento vai estar centralizado*/
+    padding-left: 30px; /*define o espaço entre o conteúdo e o lado esquerdo da tela*/ 
+    padding-bottom: 150px; /*define o espaço entre o conteúdo e o lado inferior da tela*/
+    padding-top: 70px; /*define o espaço entre o conteúdo e o lado superior da tela*/
+}
+.featured--name{
+   font-size: 60px;
+   font-weight: bold;
+   /*Formatação do título*/      
+}
+.featured--info{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    /*Formatação do sub-título*/
+}
+.featured--points{
+    display: inline-block;
+    color: #46d369;
+    margin-right: 15px;
+    /*Formatação do indice IMDB*/
+}
+.featured--year{
+    display: inline-block;
+    margin-right: 15px;   
+    /*Formatação do ano*/
+}
+.featured--season{
+    display: inline-block;
+    margin-right: 15px;    
+    /*Formatação da temporada*/
+}
+.featured--description{
+    font-size: 20px;
+    margin-top: 15px;    
+    color: #999;
+    max-width: 40%;
+    /*Formatação da descrição*/
+}
+.featured--button{
+    margin-top: 15px;
+    /*Formatação do botão*/
+}
+.featured--watchbutton{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: #fff;
+    color: #000;
+    opacity: 1;
+    transition: all 0.2s;
+    /*Estilização do botão assistir*/
 
+}
+.featured--mylistchbutton{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 5px;
+    background-color: #333;
+    color: #fff;
+    opacity: 1;
+    transition: all 0.2s;
+    /*Estilização do botão adicionar a minha lista*/
 
+}
+.featured--linkbutton{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: rgb(223, 191, 191);
+    color: #000;
+    opacity: 1;
+    transition: all 0.2s;
+    /*Estilização do botão link*/    
+}
+.featured--linkbutton:hover,
+.featured--watchbutton:hover,
+.featured--mylistchbutton:hover{
+   opacity: 0.7;
+   /*Transição (efeito nos botões)*/
+}
+.featured--genres{
+    margin-top: 15px;
+    font-size: 18px;
+    color: #999;
+    /*Formatação dos gêneros*/
 }
