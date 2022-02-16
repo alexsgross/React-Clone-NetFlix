@@ -13,8 +13,8 @@
     /*para dar espaços nos cantos*/
 }
 .movieRow--list{
-    width: 999999px;
-    /*Tamanho máximo da lista*/
+    transition: all ease 0.5s;
+    /*Todos os elementos que estão dentro da classe movieRow--list devem ter a transição*/  /*ease é um tipo de animação*/  
 }
 .movieRow--item{
     display: inline-block; 
@@ -35,4 +35,61 @@
 .movieRow--item img:hover{
     transform: scale(1);
     /*Ao passar o mouse sobre a imagem, ela fica maior. cria um efeito de lupa*/
+}
+
+.movieRow--left{
+    left: 0;    
+    /*para ficar a esquerda*/
+    z-index: 99;
+    /*para ficar um ap lado do outro*/
+    position: absolute;        
+    /*para ficar um ap lado do outro*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    /*define a largura de cada um*/
+    height: 225px;
+    /*define a altura de cada um*/
+    background-color: rgba(0,0,0,0.6);
+    /*define a cor de fundo*/
+    overflow: hidden;
+    /*Tudo o que passar da tela será cortado*/
+    cursor: pointer;
+    /*para quando passar o mouse pela imagem, fique em formato de mão */
+    opacity: 0;
+    /*para ficar invisível*/
+    transition: all 0.5s ease-in-out;
+    /*cria e suaviza o efeito de transição*/
+}
+.movieRow--right{
+    right: 0;
+    /*para ficar a direita*/
+    z-index: 99;
+    /*para ficar um ap lado do outro*/
+    display: flex;    
+    position: absolute;        
+    /*para ficar um ap lado do outro*/
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    /*define a largura de cada um*/
+    height: 225px;
+    /*define a altura de cada um*/
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+    /*nao deixa o conteudo passar da tela*/
+    cursor: pointer;
+    /*para quando passar o mouse pela imagem, fique em formato de mão */
+    opacity: 0;
+    /*para ficar invisível*/
+    transition: all 0.5s ease-in-out;
+    /*cria e suaviza o efeito de transição*/
+
+}
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right{
+    opacity: 1;
+    /*para ficar visível*/
+   
 }
