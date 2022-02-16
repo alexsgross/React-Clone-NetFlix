@@ -70,6 +70,12 @@ export default () => {
                     <MovieRow key={key} title={item.title} items={item.items} />
                 ))}
             </section>
+            <footer>
+                Feito com <spam role="img" aria-label="coração">❤️</spam> Por Alex Sandro Gross<br/>
+                Todos os direitos reservados a Netflix<br/>
+                Os dados para o projeto foram extraídos do Site Themoviedb.org
+
+            </footer>
         </div>
     );
 
