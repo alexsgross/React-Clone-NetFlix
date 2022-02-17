@@ -5,7 +5,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { makeStyles } from '@material-ui/core/styles';
 
 export default ({title, items} ) => {
-    const[scrollX, setScrollX] = useState(-400);
+    const[scrollX, setScrollX] = useState(0);
 
 
     const handleLeftArrow = () => {

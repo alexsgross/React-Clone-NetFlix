@@ -101,3 +101,30 @@
     font-size: 18px;
     color: #999;     /*Formatação dos gêneros*/
 }
+
+@media (max-width: 760px) {
+   .featured{
+       height: 85vh;
+   }
+   .featured--name{
+       font-size: 40px;
+   }
+   .featured--info{
+       font-size: 16px;
+   }
+   .featured--description{
+         font-size: 16px;
+         max-width: 100%;
+         margin-right: 30px;
+   }
+   .featured--watchbutton,
+   .featured--mylistchbutton,
+   .featured--linkbutton{
+         font-size: 11px;
+   }
+   .featured--genres{
+         font-size: 14px;
+   }
+    
+
+}

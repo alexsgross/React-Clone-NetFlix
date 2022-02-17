@@ -57,11 +57,16 @@ export default () => {
                 ))}
             </section>
             <footer>
-                Feito com <spam role="img" aria-label="coração">❤️</spam> Por Alex Sandro Gross<br/>
+                Projeto feito em React <spam role="img" aria-label="coração"></spam> Por Alex Sandro Gross<br/>
                 Todos os direitos reservados a Netflix<br/>
-                Os dados para o projeto foram extraídos do Site Themoviedb.org
-
+                Os dados para o projeto foram extraídos do Site Themoviedb.org              
             </footer>
+
+            {movieList.length <= 0 &&
+                <div className="loading">
+                        <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="Carregando"/>                
+                </div>
+            }
         </div>
     );
 
