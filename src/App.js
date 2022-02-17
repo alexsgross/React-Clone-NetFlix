@@ -7,38 +7,26 @@ import Header from "./components/Header";
 
 export default () => {
 
-    const [movieList, setMovieList] = useState([]);
-    //inicia com uma lista vazia
-    const [featuredData, setFeaturedData] = useState(null);
-    //inicia com um valor nulo e exibe o filme em destaque  
-    const [blackHeader, setBlackHeader] = useState(false);
-    //inicia com false e altera o css do header para black
+    const [movieList, setMovieList] = useState([]); //inicia com uma lista vazia
+    const [featuredData, setFeaturedData] = useState(null); //inicia com um valor nulo e exibe o filme em destaque  
+    const [blackHeader, setBlackHeader] = useState(false); //inicia com false e altera o css do header para black
 
     
-    useEffect(() => {
-        //Prepara para executar a função ao iniciar o componente
-        const LoadAll = async () => {
-            //pegando a lista total
+    useEffect(() => { //Prepara para executar a função ao iniciar o componente
+        const LoadAll = async () => { //pegando a lista total
             let list = await Tmdb.getHomeList();
-            setMovieList(list);
-
-            //pegando o filme em destaque
-            let originals = list.filter(i=>i.slug === 'originals');
-            //gera um filme aleatório
-            let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length -1));
-            //pega o filme aleatório
-            let chosen = originals[0].items.results[randomChosen];
-            //pega o filme aleatório e armazena no featuredData
-            let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
-            //chama a função setFeaturedData e passa o filme aleatório
+            setMovieList(list);  //pegando o filme em destaque
+            let originals = list.filter(i=>i.slug === 'originals'); //gera um filme aleatório
+            let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length -1)); //pega o filme aleatório
+            let chosen = originals[0].items.results[randomChosen];  //pega o filme aleatório e armazena no featuredData
+            let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');  //chama a função setFeaturedData e passa o filme aleatório
             setFeaturedData(chosenInfo);
         }
         LoadAll();
 
     }, []);
 
-    useEffect(() => {
-        //Prepara para executar a função ao iniciar o componente
+    useEffect(() => {  //Prepara para executar a função ao iniciar o componente
         const scrollListener = () => { 
             if(window.scrollY > 10){
                 setBlackHeader(true);
@@ -48,8 +36,7 @@ export default () => {
         
         }
         window.addEventListener('scroll', scrollListener);
-        return () => {
-            //Prepara para executar a função ao sair do componente
+        return () => { //Prepara para executar a função ao sair do componente
             window.removeEventListener('scroll', scrollListener);
         }
 
@@ -61,8 +48,7 @@ export default () => {
             <Header black={blackHeader} />            
 
             {featuredData &&
-                <FeaturedMovie item={featuredData} />
-                    //passando o filme em destaque
+                <FeaturedMovie item={featuredData} />  //passando o filme em destaque
             }
 
             <section className="lists">                

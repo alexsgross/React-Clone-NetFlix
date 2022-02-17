@@ -1,20 +1,16 @@
 .featured{
-    height: 100vh;
-    /*define o tamanho da tela em que o  usuário esta acessando (fica do tamanho inicial da tela*/
+    height: 100vh;  /*define o tamanho da tela em que o  usuário esta acessando (fica do tamanho inicial da tela*/
 }
 .featured--vertical{
     width: inherit;
-    height: inherit;
-    /*defin largura e altura da tela*/
-    background: linear-gradient(to top, #111 5%, transparent 95%);
-    /*define um degrade de fundo para finalizar a imagem igualando ao fundo*/
+    height: inherit;  /*defin largura e altura da tela*/
+    background: linear-gradient(to top, #111 5%, transparent 95%); /*define um degrade de fundo para finalizar a imagem igualando ao fundo*/
     
 }
 .featured--horizontal{
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right, #111 10% , transparent 90%);    
-    /*define um degrade de fundo para finalizar a imagem igualando ao fundo da esquerda para direita*/
+    background: linear-gradient(to right, #111 10% , transparent 90%); /*define um degrade de fundo para finalizar a imagem igualando ao fundo da esquerda para direita*/
     display: flex; /*define que o elemento pode ser dividido em linhas e colunas*/
     flex-direction: column; /*define que o elemento será dividido em linhas e colunas*/
     justify-content: center; /*define que o elemento vai estar centralizado*/
@@ -24,41 +20,34 @@
 }
 .featured--name{
    font-size: 60px;
-   font-weight: bold;
-   /*Formatação do título*/      
+   font-weight: bold;    /*Formatação do título*/      
 }
 .featured--info{
     font-size: 18px;
     font-weight: bold;
-    margin-top: 15px;
-    /*Formatação do sub-título*/
+    margin-top: 15px;    /*Formatação do sub-título*/
 }
 .featured--points{
     display: inline-block;
     color: #46d369;
-    margin-right: 15px;
-    /*Formatação do indice IMDB*/
+    margin-right: 15px;     /*Formatação do indice IMDB*/
 }
 .featured--year{
     display: inline-block;
-    margin-right: 15px;   
-    /*Formatação do ano*/
+    margin-right: 15px;       /*Formatação do ano*/
 }
 .featured--season{
     display: inline-block;
-    margin-right: 15px;    
-    /*Formatação da temporada*/
+    margin-right: 15px;       /*Formatação da temporada*/
 }
 .featured--description{
     font-size: 20px;
     margin-top: 15px;    
     color: #999;
-    max-width: 40%;
-    /*Formatação da descrição*/
+    max-width: 40%;     /*Formatação da descrição*/
 }
 .featured--button{
-    margin-top: 15px;
-    /*Formatação do botão*/
+    margin-top: 15px;     /*Formatação do botão*/
 }
 .featured--watchbutton{
     display: inline-block;
@@ -71,8 +60,7 @@
     background-color: #fff;
     color: #000;
     opacity: 1;
-    transition: all 0.2s;
-    /*Estilização do botão assistir*/
+    transition: all 0.2s;     /*Estilização do botão assistir*/
 
 }
 .featured--mylistchbutton{
@@ -87,8 +75,7 @@
     background-color: #333;
     color: #fff;
     opacity: 1;
-    transition: all 0.2s;
-    /*Estilização do botão adicionar a minha lista*/
+    transition: all 0.2s;     /*Estilização do botão adicionar a minha lista*/
 
 }
 .featured--linkbutton{
@@ -102,18 +89,15 @@
     background-color: rgb(223, 191, 191);
     color: #000;
     opacity: 1;
-    transition: all 0.2s;
-    /*Estilização do botão link*/    
+    transition: all 0.2s;     /*Estilização do botão link*/    
 }
 .featured--linkbutton:hover,
 .featured--watchbutton:hover,
 .featured--mylistchbutton:hover{
-   opacity: 0.7;
-   /*Transição (efeito nos botões)*/
+   opacity: 0.7;   /*Transição (efeito nos botões)*/
 }
 .featured--genres{
     margin-top: 15px;
     font-size: 18px;
-    color: #999;
-    /*Formatação dos gêneros*/
+    color: #999;     /*Formatação dos gêneros*/
 }

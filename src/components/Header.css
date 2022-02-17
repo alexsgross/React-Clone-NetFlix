@@ -5,14 +5,10 @@ header{
     left: 0;
     right: 0;
     height: 70px;
-    display: flex;
-    /*Com eu colo ou defino que o cabeçalho vai ficar no topo e alinhado*/
-    justify-content: space-between;
-    /*Para que um fique na esquerda e outro na direita*/
-    align-items: center;
-    /* Para que eles fiquem alinhado entre eles*/
-    padding: 0 30px;
-    /*Descola as logos*/
+    display: flex;     /*Com eu colo ou defino que o cabeçalho vai ficar no topo e alinhado*/
+    justify-content: space-between;     /*Para que um fique na esquerda e outro na direita*/
+    align-items: center;     /* Para que eles fiquem alinhado entre eles*/
+    padding: 0 30px;     /*Descola as logos*/
     background: transparent;
     transition: all ease 0.5s;
 }
